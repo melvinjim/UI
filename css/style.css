@@ -122,10 +122,70 @@ body{
     background-color: #f8f6f7;
 }
 
-tr th+td{
+.action-title{
+    padding-left: 27px !important;
+}
+
+header div+div div a{
+    color: #ffff;
+    text-decoration: none !important;
+}
+
+a:hover{color:#ffff;
+    text-decoration:underline 
+}
+
+.tasks-c{
+    color: #ffffff63;
+}
+
+.text-task{
     color: #6fbdd3;
 }
 
-.action-title{
-    padding-left: 27px !important;
+.checkbox{
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+input[type=checkbox] + label{
+    display: block;
+    margin: 0.2em;
+    cursor: pointer;
+}
+
+input[type=checkbox]{
+    display: none !important;
+}
+
+input[type=checkbox] + label:before{
+    content: "\2713";
+    border: 0.1em solid #00000024;
+    border-radius: 50%;
+    width: 18px;
+    height: 17px;
+    padding-left: 0.2em;
+    padding-bottom: 0.3em;
+    padding-right: 0.2em;
+    padding-top: 2px;
+    vertical-align: bottom;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    transition: .2s;
+}
+
+input[type=checkbox] + label:active:before{
+    transform:scale(0);
+}
+
+input[type=checkbox]:checked + label:before{
+    background-color: #959395;
+    color: #fff !important;
+}
+
+.checkbox-container{
+    width: 10px;
 }

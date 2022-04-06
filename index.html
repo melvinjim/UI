@@ -26,53 +26,50 @@
         </div>
         <div class="tasks">
             <div class="link-incompleted">
-                <p>Incomplete Tasks</p>
+                <a href="#" class="tasks">Incomplete Tasks</a>
             </div>
             <div class="link-completed">
-                <p>Completed Tasks</p>
+                <a href="#" class="tasks-c">Completed Tasks</a>
             </div>
         </div>
     </header>
     <section>
         <div class="container">
             <div class="botton-add-task container-fluid">
-                <button class="add-task btn btn-primary">Add Task</button>
+                <a href="#" class="add-task btn btn-primary">Add Task</a>
             </div>
             <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col"></th>
+                    <th scope="col" class="checkbox-container"></th>
                     <th scope="col">Task</th>
                     <th scope="col">Complete By</th>
                     <th scope="col" class="action-title">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row" class="icon"><i class="icons fa-solid fa-circle-check"></i></th>
-                    <td>Client Meeting</td>
-                    <td>08 May 2019</td>
-                    <td><i class="icons-edit fa-solid fa-pencil"></i> <i class="icons-trash fa-solid fa-trash-can"></i></td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="icon"><i class="icons fa-solid fa-circle-check"></i></th>
-                    <td>Design App Interface</td>
-                    <td>15 May 2019</td>
-                    <td><i class="icons-edit fa-solid fa-pencil"></i> <i class="icons-trash fa-solid fa-trash-can"></i></td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="icon"><i class="icons fa-solid fa-circle-check"></i></th>
-                    <td>Lear Node.js</td>
-                    <td>3 sep 2019</td>
-                    <td><i class="icons-edit fa-solid fa-pencil"></i> <i class="icons-trash fa-solid fa-trash-can"></i></td>
-                  </tr>
-                  <tr>
-                    <th scope="row" class="icon"><i class="icons fa-solid fa-circle-check"></i></th>
-                    <td>Bring the puuppy out XD</td>
-                    <td>24 jul 2019</td>
-                    <td><i class="icons-edit fa-solid fa-pencil"></i> <i class="icons-trash fa-solid fa-trash-can"></i></td>
-                  </tr>
-                </tbody>
+                    <tr>
+                      <td><input type="checkbox" id="no" name="#" value="#" class="checkbox icon"><label for="no"></label></td>
+                      <td class="text-task">Client Meeting</td>
+                      <td>08 May 2019</td>
+                      <td><a href="#"><i class="icons-edit fa-solid fa-pencil"></i></a><a href="#"><i class="icons-trash fa-solid fa-trash-can"></i></a></td>
+                    </tr>
+                    <tr>
+                      <td><input type="checkbox" id="nos" name="#" value="#" class="checkbox icon"><label for="nos"></label></td>
+                      <td class="text-task">Design App Interface</td>
+                      <td>15 May 2019</td>
+                      <td><a href="#"><i class="icons-edit fa-solid fa-pencil"></i></a><a href="#"><i class="icons-trash fa-solid fa-trash-can"></i></a></td>                    </tr>
+                    <tr>
+                      <td><input type="checkbox" id="nom" name="#" value="#" class="checkbox icon"><label for="nom"></label></td>
+                      <td class="text-task">Lear Node.js</td>
+                      <td>3 sep 2019</td>
+                      <td><a href="#"><i class="icons-edit fa-solid fa-pencil"></i></a><a href="#"><i class="icons-trash fa-solid fa-trash-can"></i></a></td>                    </tr>
+                    <tr>
+                      <td><input type="checkbox" id="not" name="#" value="#" class="checkbox icon"><label for="not"></label></td>
+                      <td class="text-task">Bring the puuppy out XD</td>
+                      <td>24 jul 2019</td>
+                      <td><a href="#"><i class="icons-edit fa-solid fa-pencil"></i></a><a href="#"><i class="icons-trash fa-solid fa-trash-can"></i></a></td>                    </tr>
+                  </tbody>
             </table>
         </div>
     </section>
