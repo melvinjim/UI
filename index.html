@@ -10,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/14fb058027.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <link rel="icon" type="image/png" href="img/tl.jpeg">
+    <title>ToDo-List</title>
 </head>
 <body>
     <header class="title-todo">
@@ -32,72 +33,47 @@
             </div>
         </div>
     </header>
-    <section id="board">
-        <div class="botton-add-task container-fluid">
-            <button class="add-task btn btn-primary">Add Task</button>
-        </div>
-        <div class="title-board container-fluid">
-            <div class="title-task">
-                <p>Task</p>
+    <section>
+        <div class="container">
+            <div class="botton-add-task container-fluid">
+                <button class="add-task btn btn-primary">Add Task</button>
             </div>
-            <div>
-                <p>Complete By</p>
-            </div>
-            <div class="title-action">
-                <p>Actions</p>
-            </div>
-        </div>
-        <div class="board container-fluid">
-            <i class="icons fa-solid fa-circle-check"></i>
-            <div class="text-board">
-                <p>Client Meeting</p>
-            </div>
-            <div class="text-day">
-                <p>08 May 2019</p>
-            </div>
-            <div class="icon-action">
-                <i class="icons-edit fa-solid fa-pencil"></i>
-                <i class="icons-trash fa-solid fa-trash-can"></i>
-            </div>
-        </div>
-        <div class="board container-fluid">
-            <i class="icons fa-solid fa-circle-check"></i>
-            <div class="text-board">
-                <p>Design App Interface</p>
-            </div>
-            <div class="text-day-15">
-                <p>15 May 2019</p>
-            </div>
-            <div class="icon-action">
-                <i class="icons-edit fa-solid fa-pencil"></i>
-                <i class="icons-trash fa-solid fa-trash-can"></i>
-            </div>
-        </div>
-        <div class="board container-fluid">
-            <i class="icons fa-solid fa-circle-check"></i>
-            <div class="text-board">
-                <p>Task</p>
-            </div>
-            <div class="text-day">
-                <p>Complete By</p>
-            </div>
-            <div class="icon-action">
-                <i class="icons-edit fa-solid fa-pencil"></i>
-                <i class="icons-trash fa-solid fa-trash-can"></i>
-            </div>
-        </div>
-        <div class="board container-fluid">
-            <i class="icons fa-solid fa-circle-check"></i>
-            <div class="text-board">
-                <p>Task</p>
-            </div>
-            <div class="text-day">
-                <p>Complete By</p>
-            </div>
-            <div class="icon-action">
-                <i class="icons-edit fa-solid fa-pencil"></i>
-                <i class="icons-trash fa-solid fa-trash-can"></i>
-            </div>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Task</th>
+                    <th scope="col">Complete By</th>
+                    <th scope="col" class="action-title">Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row" class="icon"><i class="icons fa-solid fa-circle-check"></i></th>
+                    <td>Client Meeting</td>
+                    <td>08 May 2019</td>
+                    <td><i class="icons-edit fa-solid fa-pencil"></i> <i class="icons-trash fa-solid fa-trash-can"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="icon"><i class="icons fa-solid fa-circle-check"></i></th>
+                    <td>Design App Interface</td>
+                    <td>15 May 2019</td>
+                    <td><i class="icons-edit fa-solid fa-pencil"></i> <i class="icons-trash fa-solid fa-trash-can"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="icon"><i class="icons fa-solid fa-circle-check"></i></th>
+                    <td>Lear Node.js</td>
+                    <td>3 sep 2019</td>
+                    <td><i class="icons-edit fa-solid fa-pencil"></i> <i class="icons-trash fa-solid fa-trash-can"></i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row" class="icon"><i class="icons fa-solid fa-circle-check"></i></th>
+                    <td>Bring the puuppy out XD</td>
+                    <td>24 jul 2019</td>
+                    <td><i class="icons-edit fa-solid fa-pencil"></i> <i class="icons-trash fa-solid fa-trash-can"></i></td>
+                  </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 </body>
