@@ -1,11 +1,14 @@
-.title-todo{
+*{
+    font-family: 'Source Sans Pro';
+}
+
+.title-todo {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #70bfdb !important;
     height: 100px !important;
-    padding: 40px;
-    padding-top: 60px;
+    padding: 50px 30px;
     color: #ffff;
     font-family: 'Source Sans Pro', sans-serif;
     padding-bottom: 44px;
@@ -19,13 +22,10 @@
     display: flex;
     align-items: center;
     padding-top: 7px;
-    border: solid #ffff;
-    border-bottom: none;
-    border-top: none;
-    border-left: none;
+    border-right: solid 2px;
     margin-right: 60px;
     padding-right: 60px;
-    font-size: 35px;
+    font-size: 30px;
     height: 70px;
 }
 
@@ -55,60 +55,15 @@
     display: flex;
     justify-content: end;
     margin-bottom: 20px;
-    padding: 0% !important;
+    padding: 20px 0px 0px 0px !important;
 }
 
 .add-task{
-    background-color: #70c0db;
-    border-color: #70c0db;
+    background-color: #70c0db !important;
+    border-color: #70c0db !important;
     width: 150px;
     border-radius: 3px;
-}
-
-#board{
-    background-color: #f7f6f2;
-    height: 520px;
-    padding: 20px 40px 0px 40px;
-}
-
-.title-board{
-    display: flex;
-    color: #ffff;
-    background-color: #184668;
-    justify-content: space-between;
-    height: 60px;
-    padding-top: 17px;
-}
-
-.title-task{
-    margin-left: 80px;
-}
-
-.title-action{
-    margin-left: -500px;
-    margin-right: 135px;
-}
-
-.board{
-    display: flex;
-    color: black;
-    background-color: #ffffff;
-    justify-content: space-between;
-    height: 60px;
-    padding-top: 17px;
-    border-bottom: #f1eef1 solid;
-}
-
-.text-board{
-    margin-left: -675px;
-}
-
-.text-day{
-    margin-left: -80px;
-}
-
-.text-day-15{
-    margin-left: -124px;
+    padding: 10px;
 }
 
 .icons{
@@ -123,13 +78,54 @@
     color: #959395;
 }
 
+thead{
+    background-color: #184668;
+    color: #ffff;
+}
+
+.icon{
+    width: 10px;
+}
+
+.icons-edit{
+    margin-left: 20px;
+    margin-top: 4px;
+    color: #959395;
+}
+
 .icons-trash{
     margin-left: 20px;
     margin-top: 4px;
     color: #d88181;;
 }
 
-.icon-action{
-    margin-left: -520px;
-    margin-right: 130px;
+.icons{
+    margin-left: 20px;
+    margin-top: 4px;
+    color: #959395;
+}
+
+@media (min-width: 1200px){
+    .container{
+        max-width: 1390px !important;
+    }
+}
+
+.table{
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: #ffff;
+    box-shadow: 1px 5px 5px #00000024;
+}
+
+body{
+    background-color: #f8f6f7;
+}
+
+tr th+td{
+    color: #6fbdd3;
+}
+
+.action-title{
+    padding-left: 27px !important;
 }
