@@ -33,12 +33,12 @@
             </div>
         </div>
     </header>
-    <!-- <section>
+    <section id="table">
         <div class="container boards">
             <div class="botton-add-task container-fluid">
-                <a href="#" class="add-task btn btn-primary">Add Task</a>
+                <a href="#" class="add-task btn btn-primary" id="botton-add-task" onclick="add()">Add Task</a>
             </div>
-            <table class="table">
+            <table class="table" id="table-content">
                 <thead>
                   <tr>
                     <th scope="col" class="checkbox-container"></th>
@@ -72,33 +72,34 @@
                   </tbody>
             </table>
         </div>
-    </section> -->
-    <section>
+    </section>
+    <section id="task">
         <div class="new-task container">
             <h2><span>New Task</span></h2>
             <div class="title-limit">
                 <div class="title-text">
                     <p class="text-limit-title"><span>Title</span></p>
-                    <input class="form-control" type="text">
+                    <input id="title" class="form-control" type="text">
                 </div>
                 <div class="limit-text">
                     <p class="text-limit-title"><span>Limit Date</span></p>
-                    <input class="form-control" type="text">
+                    <input id="limit" class="form-control" type="text">
                 </div>
             </div>
             <div class="description-text">
                 <p><span>Description</span></p>
-                <textarea class="type-text-description form-control"></textarea>
+                <textarea id="description" class="type-text-description form-control"></textarea>
             </div>
             <div class="cancel-create">
                 <div class="botton-cancel">
-                    <a href="#" class="cancel btn">Cancel</a>
+                    <a href="#" class="cancel btn" onclick="cancel()">Cancel</a>
                 </div>
                 <div class="botton-create-task">
-                    <a href="#" class="create btn">Create Task</a>
+                    <a href="#" class="create btn" onclick="capture()">Create Task</a>
                 </div>
             </div>
         </div>
     </section>
 </body>
 </html>
+<script src="js/style.js"></script>

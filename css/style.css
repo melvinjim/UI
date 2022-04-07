@@ -270,3 +270,11 @@ h2 span {
 .type-text-description{
     height: 130px !important;
 }
+
+#table{
+    display: block;
+}
+
+#task{
+    display: none;
+}
