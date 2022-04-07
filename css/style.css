@@ -106,7 +106,7 @@ thead{
 }
 
 @media (min-width: 1200px){
-    .container{
+    .boards{
         max-width: 1390px !important;
     }
 }
@@ -190,4 +190,83 @@ input[type=checkbox]:checked + label:before{
 
 .task-container{
     width: 725px;
+}
+
+.new-task{
+    width: 820px;
+    height: 410px;
+    background-color: #ffffff;
+    margin-top: 40px;
+    padding: 30px 30px 20px;
+    box-shadow: 1px 2px 5px #00000045;
+}
+
+h2 span {
+    font-size: 24px;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title-limit{
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-text{
+    width: 49%;
+    padding: 5px;
+}
+
+.limit-text{
+    width: 49%;
+    padding: 5px;
+}
+
+.text-limit-title{
+    margin-bottom: 5px;
+}
+
+.description-text p{
+    margin-bottom: 3px;
+}
+
+.description-text{
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.write-description{
+    height: 140px;
+}
+
+.cancel-create{
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+}
+
+.cancel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9fafb;
+    color: #000 !important;
+    margin-right: 10px;
+    width: 110px;
+    height: 34px;
+}
+
+.create{
+    background-color: #6fbdd3;
+    color: #ffff !important;
+    height: 34px;
+    width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.type-text-description{
+    height: 130px !important;
 }
