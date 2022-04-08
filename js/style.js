@@ -42,7 +42,7 @@ function addData(){
     if (styleTask.display == 'block'){
         baseDatos.push(newDate);
         console.log(baseDatos)
-        document.getElementById("table-content").innerHTML += '<tbody><td></td><td>' +newDate.title+ '</td><td>' +newDate.limit + '</td><td>' + newDate.description + '</td><td></td></tbody>'
+        document.getElementById("table-content").innerHTML += '<tbody><td><input type="checkbox" id="unic" name="#" value="#" class="checkbox icon"><label for="unic"></label></td><td style="color: #70c0db;">'+newDate.title+ '</td><td>' +newDate.limit + '</td><td><a href="#"><i class="icons-edit fa-solid fa-pencil"></i></a><a href="#"><i class="icons-trash fa-solid fa-trash-can"></i></a></td></tbody>'
         task.style = 'display: none'
         if(style.display == 'none'){
             table.style = 'display: block'
