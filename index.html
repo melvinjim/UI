@@ -38,7 +38,7 @@
             <div class="botton-add-task container-fluid">
                 <a href="#" class="add-task btn btn-primary" id="botton-add-task" onclick="add()">Add Task</a>
             </div>
-            <table class="table" id="table-content">
+            <table class="table" >
                 <thead>
                   <tr>
                     <th scope="col" class="checkbox-container"></th>
@@ -47,7 +47,7 @@
                     <th scope="col" class="action-title">Actions</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody id="tbody-content">
                     <!-- <tr>
                       <td><input type="checkbox" id="no" name="#" value="#" class="checkbox icon"><label for="no"></label></td>
                       <td class="text-task">Client Meeting</td>
@@ -86,7 +86,7 @@
                 </div>
                 <div class="limit-text">
                     <p class="text-limit-title"><span>Limit Date</span></p>
-                    <input id="limit" class="form-control" type="text">
+                    <input id="limit" class="form-control" type="date">
                 </div>
             </div>
             <div class="description-text">

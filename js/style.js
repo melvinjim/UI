@@ -44,10 +44,8 @@ var baseDatos= [];
 function addData(){
     if (styleTask.display == 'block'){
         baseDatos.push(newDate);
-        document.getElementById("table-content").innerHTML += '<td><input type="checkbox" id="#" name="#" value="#" class="checkbox icon"><label for="#"></label></td><td data-title="newDate.title"> <span class="newdata">'+newDate.title+ '</span></td><td data-limit="newDate.limit"></td><td><a href="#"><i class="icons-edit fa-solid fa-pencil"></i></a><a href="#"><i class="icons-trash fa-solid fa-trash-can"></i></a></td>'
+        document.getElementById("tbody-content").innerHTML += '<td><input type="checkbox" id="#" name="#" value="#" class="checkbox icon"><label for="#"></label></td><td data-title="'+newDate.title+'" data-limit="'+newDate.limit+'" data-description="'+newDate.description+'" > <span class="newdata">'+newDate.title+ '</span></td><td></td><td><a href="#"><i class="icons-edit fa-solid fa-pencil"></i></a><a href="#"><i class="icons-trash fa-solid fa-trash-can"></i></a></td>'
         task.style = 'display: none'
-        console.log(newDate.limit)
-        console.log(newDate.description)
         if(style.display == 'none'){
             table.style = 'display: block'
         }
