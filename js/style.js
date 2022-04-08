@@ -3,6 +3,9 @@ var add = function(){
     style = getComputedStyle(table);
     task = document.getElementById("task");
     styleTask = getComputedStyle(task)
+    document.getElementById("title").value = " ";
+    document.getElementById("description").value = " ";
+    document.getElementById("limit").value = " ";
 
     if(style.display == 'block'){
         table.style = 'display: none'
@@ -41,11 +44,13 @@ var baseDatos= [];
 function addData(){
     if (styleTask.display == 'block'){
         baseDatos.push(newDate);
-        console.log(baseDatos)
-        document.getElementById("table-content").innerHTML += '<tbody><td><input type="checkbox" id="unic" name="#" value="#" class="checkbox icon"><label for="unic"></label></td><td style="color: #70c0db;">'+newDate.title+ '</td><td>' +newDate.limit + '</td><td><a href="#"><i class="icons-edit fa-solid fa-pencil"></i></a><a href="#"><i class="icons-trash fa-solid fa-trash-can"></i></a></td></tbody>'
+        document.getElementById("table-content").innerHTML += '<td><input type="checkbox" id="#" name="#" value="#" class="checkbox icon"><label for="#"></label></td><td data-title="newDate.title"> <span class="newdata">'+newDate.title+ '</span></td><td data-limit="newDate.limit"></td><td><a href="#"><i class="icons-edit fa-solid fa-pencil"></i></a><a href="#"><i class="icons-trash fa-solid fa-trash-can"></i></a></td>'
         task.style = 'display: none'
+        console.log(newDate.limit)
+        console.log(newDate.description)
         if(style.display == 'none'){
             table.style = 'display: block'
         }
     }
 }
+
