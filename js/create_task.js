@@ -6,22 +6,25 @@ var add = function(){
     document.getElementById("title").value = "";
     document.getElementById("description").value = "";
     document.getElementById("limit").value = "";
+    create = document.getElementById("create-task");
+    createStyle = getComputedStyle(create);
+    edit = document.getElementById("edit-task");
+    editStyle = getComputedStyle(edit);
 
     if(style.display == 'block'){
         table.style = 'display: none'
         if(styleTask.display == 'none'){
             document.getElementById("title-newtask").innerHTML =  "New Task"
-            document.getElementById("button-create").innerHTML =  "Create Task"
             task.style = 'display: block'
         }
     }
     else{
         table.style = 'display: block'
     }
-    if(ola.display == 'none'){
-        document.getElementById('le').style.display = 'flex';
-        if(chao.display == 'block'){
-            document.getElementById('lo').style.display = 'none';
+    if(createStyle.display == 'none'){
+        document.getElementById('create-task').style.display = 'flex';
+        if(editStyle.display == 'block'){
+            document.getElementById('edit-task').style.display = 'none';
         }
     }
 }
@@ -48,12 +51,14 @@ var capture = function(){
     console.log(newDate)
     addData();
 }
+
 var baseDatos= [];
 function addData(){
     if (styleTask.display == 'block'){
         baseDatos.push(newDate);
-        document.getElementById("tbody-content").innerHTML += '<td> <input type="checkbox" id="#" name="#" value="#" class="checkbox icon"> <label for="#"> </label> </td> <td data-title= '+newDate.title+' data-limit= '+newDate.limit+' data-description= '+newDate.description+'> <span class="newdata">'+newDate.title+'</span></td><td></td><td><a href="#"> <i class="icons-edit fa-solid fa-pencil" id="edit" onclick="pencilEdit()"> </i> </a> <a href="#"> <i class="icons-trash fa-solid fa-trash-can"> </i> </a> </td>'
+        document.getElementById("tbody-content").innerHTML += '<tr class="datos"> <td> <input type="checkbox" id="#" name="#" value="#" class="checkbox icon"> <label for="#"> </label> </td> <td data-title= '+newDate.title+' data-limit= '+newDate.limit+' data-description= '+newDate.description+'> <span class="newdata">'+newDate.title+'</span></td><td></td><td><a href="#"> <i class="icons-edit fa-solid fa-pencil" class="edit" onclick="pencilEdit()"> </i> </a> <a href="#"> <i class="icons-trash fa-solid fa-trash-can"> </i> </a> </td> </tr>'
         task.style = 'display: none'
+
         if(style.display == 'none'){
             table.style = 'display: block'
         }

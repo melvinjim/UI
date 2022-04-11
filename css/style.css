@@ -257,7 +257,7 @@ h2 span {
     height: 34px;
 }
 
-#le{
+#create-task{
     display: flex;
 }
 
@@ -270,7 +270,7 @@ h2 span {
     justify-content: center;
 }
 
-#lo{
+#edit-task{
     display: none;
 }
 
