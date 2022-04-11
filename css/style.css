@@ -257,12 +257,28 @@ h2 span {
     height: 34px;
 }
 
+#create-task{
+    display: flex;
+}
+
 .create{
     background-color: #6fbdd3;
     color: #ffff !important;
     height: 34px;
     width: 140px;
-    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#edit-task{
+    display: none;
+}
+
+#button-edit{
+    background-color: #6fbdd3;
+    color: #ffff !important;
+    height: 34px;
+    width: 140px;
     align-items: center;
     justify-content: center;
 }
