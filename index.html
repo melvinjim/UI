@@ -77,8 +77,8 @@
         </div>
     </section>
     <section id="task">
-        <div class="new-task container">
-            <h2><span>New Task</span></h2>
+        <div class="new-task container" >
+            <h2 id="title-newtask"><span>New Task</span></h2>
             <div class= "title-limit">
                 <div class="title-text">
                     <p class="text-limit-title"><span>Title</span></p>
@@ -94,15 +94,19 @@
                 <textarea id="description" class="type-text-description form-control"></textarea>
             </div>
             <div class="cancel-create">
-                <div class="botton-cancel">
+                <div>
                     <a href="#" class="cancel btn" onclick="cancel()">Cancel</a>
                 </div>
-                <div class="botton-create-task">
-                    <a href="#" class="create btn" onclick="capture()">Create Task</a>
+                <div id="le">
+                    <a href="#" class="create btn" onclick="capture()" id="button-create">Create Task</a>
+                </div>
+                <div id="lo">
+                    <a href="#" class="edit btn" onclick="pencilEdit()" id="button-edit">Edit Task</a>
                 </div>
             </div>
         </div>
     </section>
 </body>
 </html>
-<script src="js/createTask.js"></script>
+<script src="js/create_task.js"></script>
+<script src="js/edit_task.js"></script>
