@@ -3,13 +3,13 @@ var add = function(){
     style = getComputedStyle(table);
     task = document.getElementById("task");
     styleTask = getComputedStyle(task)
-    document.getElementById("title").value = "";
-    document.getElementById("description").value = "";
-    document.getElementById("limit").value = "";
     create = document.getElementById("create-task");
     createStyle = getComputedStyle(create);
     edit = document.getElementById("edit-task");
     editStyle = getComputedStyle(edit);
+    document.getElementById("title").value = "";
+    document.getElementById("description").value = "";
+    document.getElementById("limit").value = "";
 
     if(style.display == 'block'){
         table.style = 'display: none'
@@ -48,17 +48,18 @@ var capture = function(){
     var limitCapture = document.getElementById("limit").value;
     var descriptionCapture = document.getElementById("description").value;
     newDate = new datos(titleCapture,limitCapture,descriptionCapture)
-    console.log(newDate)
     addData();
+    document.getElementById("title").value = "";
+    document.getElementById("description").value = "";
+    document.getElementById("limit").value = "";
 }
 
 var baseDatos= [];
 function addData(){
     if (styleTask.display == 'block'){
         baseDatos.push(newDate);
-        document.getElementById("tbody-content").innerHTML += '<tr class="datos"> <td> <input type="checkbox" id="#" name="#" value="#" class="checkbox icon"> <label for="#"> </label> </td> <td data-title= '+newDate.title+' data-limit= '+newDate.limit+' data-description= '+newDate.description+'> <span class="newdata">'+newDate.title+'</span></td><td></td><td><a href="#"> <i class="icons-edit fa-solid fa-pencil" class="edit" onclick="pencilEdit()"> </i> </a> <a href="#"> <i class="icons-trash fa-solid fa-trash-can"> </i> </a> </td> </tr>'
+        document.getElementById("tbody-content").innerHTML += '<tr class="datos"> <td> <input type="checkbox" id="#" name="#" value="#" class="checkbox icon"> <label for="#"> </label> </td> <td class="row-info" data-title= '+newDate.title+' data-limit= '+newDate.limit+' data-description= '+newDate.description+'> <span class="newdata">'+newDate.title+'</span></td><td></td><td ><a href="#" class="edit"> <i class="icons-edit fa-solid fa-pencil" onclick="pencilEdit(this)"> </i> </a> <a href="#"> <i class="icons-trash fa-solid fa-trash-can"> </i> </a> </td> </tr>'
         task.style = 'display: none'
-
         if(style.display == 'none'){
             table.style = 'display: block'
         }
