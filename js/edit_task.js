@@ -20,10 +20,21 @@ pencilEdit = function(element){
     }
 
     var row = element.parentNode.parentNode.parentNode
-    console.log(row.getElementsByClassName("row-info"))
-    var rowinfo = document.getElementsByClassName("row-info");
-    var title = rowinfo.dataset-title;
-    var limit = rowinfo.dataset-limit;
-    var description = rowinfo.dataset-description;
-    console.log(title)
+    var tasks = row.getElementsByClassName("row-info")
+    var title = tasks[0].dataset.title
+    var limit = tasks[0].dataset.limit
+    var description = tasks[0].dataset.description
+    document.getElementById("title").value =  title 
+    document.getElementById("limit").value =  limit
+    document.getElementById("description").value =  description
+    
+
+
+
+    
+    
 }
+
+//     
+//     document.getElementById("input-title").innerHTML += '<span> <input id="limit" class="form-control" type="date" value="'+ limitData +'"> </span>'
+//     document.getElementById("input-description").innerHTML += '<span> <textarea id="description" class="type-text-description form-control" >'+ descriptionData +'</textarea> </span>'
