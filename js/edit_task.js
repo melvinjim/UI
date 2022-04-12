@@ -24,17 +24,7 @@ pencilEdit = function(element){
     var title = tasks[0].dataset.title
     var limit = tasks[0].dataset.limit
     var description = tasks[0].dataset.description
-    document.getElementById("title").value =  title 
-    document.getElementById("limit").value =  limit
-    document.getElementById("description").value =  description
-    
-
-
-
-    
-    
+    document.getElementById("title").value = title 
+    document.getElementById("limit").value = limit
+    document.getElementById("description").value = description
 }
-
-//     
-//     document.getElementById("input-title").innerHTML += '<span> <input id="limit" class="form-control" type="date" value="'+ limitData +'"> </span>'
-//     document.getElementById("input-description").innerHTML += '<span> <textarea id="description" class="type-text-description form-control" >'+ descriptionData +'</textarea> </span>'
