@@ -4,9 +4,8 @@ pencilEdit = function(){
     createStyle = getComputedStyle(create);
     edit = document.getElementById("edit-task");
     editStyle = getComputedStyle(edit);
-    data = document.getElementsByClassName('datos').value;
-    console.log(data)
-    console.log(newDate)
+    document.getElementById('edit').parentNode;
+
     if(style.display == 'block'){
         table.style = 'display: none'
         if(styleTask.display == 'none'){
