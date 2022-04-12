@@ -58,7 +58,7 @@ var baseDatos= [];
 function addData(){
     if (styleTask.display == 'block'){
         baseDatos.push(newDate);
-        document.getElementById("tbody-content").innerHTML += '<tr class="datos"> <td> <input type="checkbox" id="#" name="#" value="#" class="checkbox icon"> <label for="#"> </label> </td> <td class="row-info" data-title= '+newDate.title+' data-limit= '+newDate.limit+' data-description= '+newDate.description+'> <span class="newdata">'+newDate.title+'</span></td><td></td><td ><a href="#" class="edit"> <i class="icons-edit fa-solid fa-pencil" onclick="pencilEdit(this)"> </i> </a> <a href="#"> <i class="icons-trash fa-solid fa-trash-can"> </i> </a> </td> </tr>'
+        document.getElementById("tbody-content").innerHTML += '<tr class="datos"> <td> <input type="checkbox" id="#" name="#" value="#" class="checkbox icon"> <label for="#"> </label> </td> <td class="row-info" data-title='+newDate.title +' data-limit= '+newDate.limit +' data-description= '+newDate.description+'> <span class="newdata">'+newDate.title +'</span></td><td></td><td ><a href="#" class="edit"> <i class="icons-edit fa-solid fa-pencil" onclick="pencilEdit(this)"> </i> </a> <a href="#"> <i class="icons-trash fa-solid fa-trash-can"> </i> </a> </td> </tr>'
         task.style = 'display: none'
         if(style.display == 'none'){
             table.style = 'display: block'
