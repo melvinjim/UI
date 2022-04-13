@@ -34,25 +34,48 @@ editTask = function(element){
     }
 }
 
-updateTask = function(){
+updateTask = function(element){
     function setTaskValues(title, limitDate, description){
         this.title = title;
         this.limitDate = limitDate;
         this.description = description;
     };
 
-    var titleCapture = document.getElementById("title").value;
-    var limitCapture = document.getElementById("limit-date").value;
-    var descriptionCapture = document.getElementById("description").value;
+    uno = element.parentNode;
+    console.log(uno)
 
-    newDate = new setTaskValues(titleCapture, limitCapture, descriptionCapture);
+    titleCapture = document.getElementById("title").value;
+    limitDateCapture = document.getElementById("limit-date").value;
+    descriptionCapture = document.getElementById("description").value;
 
+    newDate = new setTaskValues(titleCapture, limitDateCapture, descriptionCapture);
+
+    newTitleCapture= titleCapture;
+    newDate.title = newTitleCapture; 
+    newLimitDateCapture = limitDateCapture;
+    newDate.limitDate = newLimitDateCapture;
+    newDescriptionCapture = descriptionCapture;
+    newDate.description = newDescriptionCapture;
+    
+    rowInfoNewDate = document.getElementsByClassName("row-info");
+    titleNewDate = rowInfoNewDate[0].dataset.title;
+    limitNewDate = rowInfoNewDate[0].dataset.limitDate;
+    descriptionNewDate = rowInfoNewDate[0].dataset.description;
+    titleNewDate = newTitleCapture;
+    limitNewDate = newLimitDateCapture;
+    descriptionNewDate = newDescriptionCapture;
+
+    titleNewDate = titleCapture;
+    limitNewDate = limitDateCapture;
+    descriptionNewDate = descriptionCapture;
+    hola = titleCapture;
+    console.log(titleCapture);
+    console.log(limitDateCapture);
+    console.log(descriptionCapture);
+
+    document.getElementById("title").value = titleCapture;
     if(styleTask.display == 'block'){
-        newTitleCapture= titleCapture;
-        newDate.title = newTitleCapture; 
-        document.getElementsByClassName("newdata").value = newTitleCapture;
         task.style = 'display: none';
-
         if(style.display == 'none'){
             table.style = 'display: block';
         }
