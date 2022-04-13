@@ -49,7 +49,7 @@ updateTask = function(element){
     descriptionCapture = document.getElementById("description").value;
 
     newDate = new setTaskValues(titleCapture, limitDateCapture, descriptionCapture);
-    
+
     newTitleCapture= titleCapture;
     newDate.title = newTitleCapture; 
     newLimitDateCapture = limitDateCapture;
