@@ -1,4 +1,4 @@
-var add = function(){
+var addTask = function(){
     table = document.getElementById("table");
     style = getComputedStyle(table);
     task = document.getElementById("task");
@@ -9,59 +9,65 @@ var add = function(){
     editStyle = getComputedStyle(edit);
     document.getElementById("title").value = "";
     document.getElementById("description").value = "";
-    document.getElementById("limit").value = "";
+    document.getElementById("limit-date").value = "";
 
     if(style.display == 'block'){
-        table.style = 'display: none'
+        table.style = 'display: none';
+
         if(styleTask.display == 'none'){
             document.getElementById("title-newtask").innerHTML =  "New Task"
             task.style = 'display: block'
         }
-    }
-    else{
+    } else {
         table.style = 'display: block'
     }
+
     if(createStyle.display == 'none'){
         document.getElementById('create-task').style.display = 'flex';
+
         if(editStyle.display == 'block'){
             document.getElementById('edit-task').style.display = 'none';
         }
-    }
-}
+    };
+};
 
 var cancel = function(){
     if(styleTask.display == 'block'){
-        task.style = 'display: none'
+        task.style = 'display: none';
+
         if(style.display == 'none'){
             table.style = 'display: block'
         }
     }
 }
 
-var capture = function(){
-    function datos(title,limit,description){
-        this.title=title;
-        this.limit=limit;
-        this.description=description;
+var createTask = function(){
+    function setTaskValues(title, limitDate, description){
+        this.title = title;
+        this.limitDate = limitDate;
+        this.description = description;
     }
+
     var titleCapture = document.getElementById("title").value;
-    var limitCapture = document.getElementById("limit").value;
+    var limitDateCapture = document.getElementById("limit-date").value;
     var descriptionCapture = document.getElementById("description").value;
-    newDate = new datos(titleCapture,limitCapture,descriptionCapture)
-    addData();
+    newData = new setTaskValues(titleCapture, limitDateCapture, descriptionCapture);
+
+    createRow();
+
     document.getElementById("title").value = "";
     document.getElementById("description").value = "";
-    document.getElementById("limit").value = "";
+    document.getElementById("limit-date").value = "";
 }
 
-var baseDatos= [];
-function addData(){
+function createRow(){
     if (styleTask.display == 'block'){
-        baseDatos.push(newDate);
-        document.getElementById("tbody-content").innerHTML += '<tr class="datos"> <td> <input type="checkbox" id="#" name="#" value="#" class="checkbox icon"> <label for="#"> </label> </td> <td class="row-info" data-title='+newDate.title +' data-limit= '+newDate.limit +' data-description= '+newDate.description+'> <span class="newdata">'+newDate.title +'</span></td><td></td><td ><a href="#" class="edit"> <i class="icons-edit fa-solid fa-pencil" onclick="pencilEdit(this)"> </i> </a> <a href="#"> <i class="icons-trash fa-solid fa-trash-can"> </i> </a> </td> </tr>'
-        task.style = 'display: none'
+        document.getElementById("tbody-content").innerHTML += '<tr class="datos"> <td> <input type="checkbox" id="#" name="#" value="#" class="checkbox icon"> <label for="#"> </label> </td> <td class="row-info" data-title="' + newData.title + '" data-limit-date="' + newData.limitDate + '" data-description="' + newData.description + '"> <span class="newdata">' + newData.title + '</span></td><td></td><td ><a href="#" class="edit"> <i class="icons-edit fa-solid fa-pencil" onclick="editTask(this)"> </i> </a> <a href="#"> <i class="icons-trash fa-solid fa-trash-can"> </i> </a> </td> </tr>';
+
+        task.style = 'display: none';
+
         if(style.display == 'none'){
-            table.style = 'display: block'
+            table.style = 'display: block';
         }
     }
 }

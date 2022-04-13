@@ -36,7 +36,7 @@
     <section id="table">
         <div class="container boards">
             <div class="botton-add-task container-fluid">
-                <a href="#" class="add-task btn btn-primary" id="botton-add-task" onclick="add()">Add Task</a>
+                <a href="#" class="add-task btn btn-primary" id="botton-add-task" onclick="addTask()">Add Task</a>
             </div>
             <table class="table">
                 <thead>
@@ -88,7 +88,7 @@
                 </div>
                 <div class="limit-text">
                     <p class="text-limit-title"><span>Limit Date</span></p>
-                    <input id="limit" class="form-control" type="date">
+                    <input id="limit-date" class="form-control" type="date">
                 </div>
             </div>
             <div class= "description-text" >
@@ -102,10 +102,10 @@
                     <a href="#" class="cancel btn" onclick="cancel()">Cancel</a>
                 </div>
                 <div id="create-task">
-                    <a href="#" class="create btn" onclick="capture()" id="button-create">Create Task</a>
+                    <a href="#" class="create btn" onclick="createTask()" id="button-create">Create Task</a>
                 </div>
                 <div id="edit-task">
-                    <a href="#" class="edit btn" onclick="pencilEdit()" id="button-edit">Edit Task</a>
+                    <a href="#" class="edit btn" onclick="updateTask()" id="button-edit">Edit Task</a>
                 </div>
             </div>
         </div>
