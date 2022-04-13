@@ -68,7 +68,6 @@ updateTask = function(element){
     titleNewDate = titleCapture;
     limitNewDate = limitDateCapture;
     descriptionNewDate = descriptionCapture;
-    hola = titleCapture;
     console.log(titleCapture);
     console.log(limitDateCapture);
     console.log(descriptionCapture);
