@@ -23,6 +23,7 @@ editTask = function(element){
 
     row = element.parentNode.parentNode.parentNode;
     tasks = row.getElementsByClassName("row-info");
+    console.log(tasks[0])
     title = tasks[0].dataset.title;
     limitDate = tasks[0].dataset.limitDate;
     document.getElementById("title").value = title;
