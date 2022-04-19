@@ -34,46 +34,32 @@ editTask = function(element){
     }
 }
 
-updateTask = function(element){
+updateTask = function(){
     function setTaskValues(title, limitDate, description){
         this.title = title;
         this.limitDate = limitDate;
         this.description = description;
     };
 
-    uno = element.parentNode;
-    console.log(uno)
+    newTitleCapture = document.getElementById("title").value;
+    newLimitDateCapture = document.getElementById("limit-date").value;
+    newDescriptionCapture = document.getElementById("description").value;
 
-    titleCapture = document.getElementById("title").value;
-    limitDateCapture = document.getElementById("limit-date").value;
-    descriptionCapture = document.getElementById("description").value;
+    newData = new setTaskValues(newTitleCapture, newLimitDateCapture, newDescriptionCapture);
 
-    newDate = new setTaskValues(titleCapture, limitDateCapture, descriptionCapture);
+    tasks = row.getElementsByClassName("row-info");
 
-    newTitleCapture= titleCapture;
-    newDate.title = newTitleCapture; 
-    newLimitDateCapture = limitDateCapture;
-    newDate.limitDate = newLimitDateCapture;
-    newDescriptionCapture = descriptionCapture;
-    newDate.description = newDescriptionCapture;
-    
-    rowInfoNewDate = document.getElementsByClassName("row-info");
-    titleNewDate = rowInfoNewDate[0].dataset.title;
-    limitNewDate = rowInfoNewDate[0].dataset.limitDate;
-    descriptionNewDate = rowInfoNewDate[0].dataset.description;
-    titleNewDate = newTitleCapture;
-    limitNewDate = newLimitDateCapture;
-    descriptionNewDate = newDescriptionCapture;
+    newdataTitle = row.getElementsByClassName("newdata");
 
-    titleNewDate = titleCapture;
-    limitNewDate = limitDateCapture;
-    descriptionNewDate = descriptionCapture;
-    hola = titleCapture;
-    console.log(titleCapture);
-    console.log(limitDateCapture);
-    console.log(descriptionCapture);
+    newTitleCapture = newData.title
+    newLimitDateCapture = newData.limitDate
+    newDescriptionCapture = newData.description
 
-    document.getElementById("title").value = titleCapture;
+    tasks[0].dataset.title = newTitleCapture;
+    tasks[0].dataset.limitDate = newLimitDateCapture;
+    tasks[0].dataset.description = newDescriptionCapture;
+    newdataTitle[0].innerHTML = newTitleCapture
+
     if(styleTask.display == 'block'){
         task.style = 'display: none';
         if(style.display == 'none'){

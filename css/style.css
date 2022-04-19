@@ -126,7 +126,7 @@ body{
     padding-left: 27px !important;
 }
 
-header div+div div a{
+a{
     color: #ffff;
     text-decoration: none !important;
 }
