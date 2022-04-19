@@ -41,18 +41,27 @@ updateTask = function(){
         this.description = description;
     };
 
-    var titleCapture = document.getElementById("title").value;
-    var limitCapture = document.getElementById("limit-date").value;
-    var descriptionCapture = document.getElementById("description").value;
+    newTitleCapture = document.getElementById("title").value;
+    newLimitDateCapture = document.getElementById("limit-date").value;
+    newDescriptionCapture = document.getElementById("description").value;
 
-    newDate = new setTaskValues(titleCapture, limitCapture, descriptionCapture);
+    newData = new setTaskValues(newTitleCapture, newLimitDateCapture, newDescriptionCapture);
+
+    tasks = row.getElementsByClassName("row-info");
+
+    newdataTitle = row.getElementsByClassName("newdata");
+
+    newTitleCapture = newData.title
+    newLimitDateCapture = newData.limitDate
+    newDescriptionCapture = newData.description
+
+    tasks[0].dataset.title = newTitleCapture;
+    tasks[0].dataset.limitDate = newLimitDateCapture;
+    tasks[0].dataset.description = newDescriptionCapture;
+    newdataTitle[0].innerHTML = newTitleCapture
 
     if(styleTask.display == 'block'){
-        newTitleCapture= titleCapture;
-        newDate.title = newTitleCapture; 
-        document.getElementsByClassName("newdata").value = newTitleCapture;
         task.style = 'display: none';
-
         if(style.display == 'none'){
             table.style = 'display: block';
         }

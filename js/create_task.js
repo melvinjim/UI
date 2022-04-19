@@ -51,6 +51,7 @@ var createTask = function(){
     var titleCapture = document.getElementById("title").value;
     var limitDateCapture = document.getElementById("limit-date").value;
     var descriptionCapture = document.getElementById("description").value;
+    
     newData = new setTaskValues(titleCapture, limitDateCapture, descriptionCapture);
 
     createRow();
@@ -62,7 +63,7 @@ var createTask = function(){
 
 function createRow(){
     if (styleTask.display == 'block'){
-        document.getElementById("tbody-content").innerHTML += '<tr class="datos"> <td> <input type="checkbox" id="#" name="#" value="#" class="checkbox icon"> <label for="#"> </label> </td> <td class="row-info" data-title="' + newData.title + '" data-limit-date="' + newData.limitDate + '" data-description="' + newData.description + '"> <span class="newdata">' + newData.title + '</span></td><td></td><td ><a href="#" class="edit"> <i class="icons-edit fa-solid fa-pencil" onclick="editTask(this)"> </i> </a> <a href="#"> <i class="icons-trash fa-solid fa-trash-can"> </i> </a> </td> </tr>';
+        document.getElementById("tbody-content").innerHTML += '<tr class="datos"> <td> <input type="checkbox" id="#" name="#" value="#" class="checkbox icon"> <label for="#"> </label> </td> <td class="row-info" data-title="' + newData.title + '" data-limit-date="' + newData.limitDate + '" data-description="' + newData.description + '"> <span class="newdata">' + newData.title + '</span></td><td></td><td ><a href="#" class="edit"> <i class="icons-edit fa-solid fa-pencil" onclick="editTask(this)"> </i> </a> <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal"> <i class="icons-trash fa-solid fa-trash-can" onclick="deleteBtn(this)"> </i> </a> </td> </tr>';
 
         task.style = 'display: none';
 
