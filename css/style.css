@@ -299,6 +299,6 @@ h2 span {
     color: #6fbdd3;
 }
 
-.datos{
-    display: revert;
+.hidden-task{
+    display: none;
 }
