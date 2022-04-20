@@ -298,3 +298,7 @@ h2 span {
 .newdata{
     color: #6fbdd3;
 }
+
+.datos{
+    display: revert;
+}

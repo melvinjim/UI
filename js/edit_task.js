@@ -10,6 +10,7 @@ editTask = function(element){
 
         if(styleTask.display == 'none'){
             task.style = 'display: block';
+            document.getElementById("title").focus();
         };
     };
 
