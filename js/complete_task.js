@@ -3,13 +3,13 @@ completeTask = function(element){
     checktask.classList.add('hidden-task');
 
     var date = new Date();
-    var months = ["Jan", "Feb", "Mar","Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
     formatDate = (date)=>{
-        var formatted_date = date.getDate() + " " + months[date.getMonth()] + " " + date.getFullYear();
+        var monthNameShort = date.toLocaleString("en-US", { month: "short" });
+        var formatted_date = date.getDate() + "  " + monthNameShort + "  " + date.getFullYear();
         return formatted_date;
     }
-    
+
     var completeDate  = element.parentNode.nextElementSibling.nextElementSibling;
     completeDate.innerHTML = formatDate(date)
 }
