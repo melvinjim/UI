@@ -1,3 +1,9 @@
+var counter = document.getElementById("table-dinamic");
+var fila = counter.getElementsByTagName('tbody')[0];
+dinamicDate = 0 
+dinamicDate = fila.children.length
+document.getElementById("task-incompleted").innerText = dinamicDate + " " +  "Incompleted Tasks"
+
 var date = new Date();
 
 formatDate = (date)=>{

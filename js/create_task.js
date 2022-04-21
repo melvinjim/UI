@@ -60,6 +60,9 @@ var createTask = function(){
     document.getElementById("title").value = "";
     document.getElementById("description").value = "";
     document.getElementById("limit-date").value = "";
+
+    dinamicDate++
+    document.getElementById("task-incompleted").innerText = dinamicDate + " " +  "Incompleted Tasks"
 }
 
 var count = 0; 
