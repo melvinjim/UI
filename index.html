@@ -21,7 +21,7 @@
                 <p><strong>ToDo List</strong></p>
             </div>
             <div>
-                <p class="text-incompleted">4 Incompleted Tasks</p>
+                <p class="text-incompleted" id="task-incompleted">4 Incompleted Tasks</p>
                 <p class="day" id="dinamic-date"></p>
             </div>
         </div>
@@ -39,7 +39,7 @@
             <div class="botton-add-task container-fluid">
                 <a href="#" class="add-task btn btn-primary" id="botton-add-task" onclick="addTask()">Add Task</a>
             </div>
-            <table class="table">
+            <table class="table" id="table-dinamic">
                 <thead>
                   <tr>
                     <th scope="col" class="checkbox-container"></th>

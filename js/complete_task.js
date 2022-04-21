@@ -12,4 +12,7 @@ completeTask = function(element){
 
     var completeDate  = element.parentNode.nextElementSibling.nextElementSibling;
     completeDate.innerHTML = formatDate(date)
+
+    dinamicDate--
+    document.getElementById("task-incompleted").innerText = dinamicDate + " " +  "Incompleted Tasks"
 }
