@@ -2,7 +2,7 @@ showTask = function(element){
     var arrayShowTAsk = element.parentNode.parentNode.parentNode.nextElementSibling.firstElementChild.lastElementChild.lastElementChild;
     var travelArray = arrayShowTAsk.getElementsByClassName("hidden-task");
     for (x=0;x<travelArray.length;x++){
-        travelArray[x].classList.add("hola");
+        travelArray[x].classList.add("display-tasks");
         travelArray[x].classList.remove("datos");
     }
 

@@ -17,11 +17,3 @@ completeTask = function(element){
     document.getElementById("task-incompleted").innerText = dinamicDate + " " +  "Incompleted Tasks";
 
 }
-
-// document.getElementById('deleteLineRow').onclick = () => {
-    //     checktask = element.parentNode.parentNode;
-    //     checktask.parentNode.removeChild(checktask);
-    //     checktask.classList.remove('hidden-task');
-    //     dinamicDate++
-    //     document.getElementById("task-incompleted").innerText = dinamicDate + " " +  "Incompleted Tasks"
-    // }
