@@ -53,14 +53,14 @@ updateTask = function(){
 
     newdataTitle = row.getElementsByClassName("newdata");
 
-    newTitleCapture = newData.title
-    newLimitDateCapture = newData.limitDate
-    newDescriptionCapture = newData.description
+    newTitleCapture = newData.title;
+    newLimitDateCapture = newData.limitDate;
+    newDescriptionCapture = newData.description;
 
     tasks[0].dataset.title = newTitleCapture;
     tasks[0].dataset.limitDate = newLimitDateCapture;
     tasks[0].dataset.description = newDescriptionCapture;
-    newdataTitle[0].innerHTML = newTitleCapture
+    newdataTitle[0].innerHTML = newTitleCapture;
 
     if(styleTask.display == 'block'){
         task.style = 'display: none';

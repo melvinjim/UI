@@ -48,7 +48,7 @@
 }
 
 .link-completed{
-    color: #ffffff63 !important;
+    color: #ffffff63;
 }
 
 .botton-add-task{
@@ -301,4 +301,12 @@ h2 span {
 
 .hidden-task{
     display: none;
+}
+
+.hola{
+    display: table-row;
+}
+
+#completed-task{
+    color: #ffff;
 }
