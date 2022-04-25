@@ -1,7 +1,7 @@
 completeTask = function(element){
     checktask = element.parentNode.parentNode;
     checktask.classList.add('hidden-task');
-    
+
     var date = new Date();
 
     formatDate = (date)=>{
@@ -15,5 +15,4 @@ completeTask = function(element){
 
     dinamicDate--
     document.getElementById("task-incompleted").innerText = dinamicDate + " " +  "Incompleted Tasks";
-
 }
