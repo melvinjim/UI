@@ -23,19 +23,9 @@ showIncomplete = function(element){
         globalClass[x].classList.remove("hidden-task");
     }
 
-    var PencilEdit = arrayShowTAsk.getElementsByClassName("edit");
-    for (x=0;x<PencilEdit.length;x++){
-        PencilEdit[x].classList.remove("display-none-pencil");
-    }
-
-    var trash =arrayShowTAsk.getElementsByClassName("icons-trash");
-    for (x=0;x<trash.length;x++){
-        trash[x].classList.remove("trash");
-    }
-
-    var PencilEdit = arrayShowTAsk.getElementsByClassName("edit");
-    for (x=0;x<PencilEdit.length;x++){
-        PencilEdit[x].classList.remove("display-none-pencil");
+    var pencilEdit = arrayShowTAsk.getElementsByClassName("edit");
+    for (x=0;x<pencilEdit.length;x++){
+        pencilEdit[x].classList.remove("display-none-pencil");
     }
 
     var trash = arrayShowTAsk.getElementsByClassName("icons-trash");
