@@ -47,10 +47,6 @@
     margin-right: 50px;
 }
 
-.link-completed{
-    color: #ffffff63;
-}
-
 .botton-add-task{
     display: flex;
     justify-content: end;
@@ -136,6 +132,14 @@ a:hover{color:#ffff;
 }
 
 .tasks-c{
+    color: #ffffff63;
+}
+
+.located-completed{
+    color: #ffff;
+}
+
+.located-incompleted{
     color: #ffffff63;
 }
 
@@ -309,4 +313,48 @@ h2 span {
 
 #completed-task{
     color: #ffff;
+}
+
+.display-none-pencil{
+    display: none;
+}
+
+.trash{
+    margin-left: 38px;
+}
+
+input[id=checkboxs] + label{
+    display: block;
+    margin: 0.2em;
+    cursor: pointer;
+}
+
+input[id=checkboxs]{
+    display: none !important;
+}
+
+input[id=checkboxs] + label:before{
+    content: "\2715";
+    border: 0.1em solid #F44336;
+    border-radius: 50%;
+    font-size: 10px;
+    width: 18px;
+    height: 17px;
+    padding: 2px;
+    vertical-align: bottom;
+    color: #f4433600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 15px;
+    transition: .2s;
+}
+
+input[id=checkboxs] + label:active:before{
+    transform:scale(0);
+}
+
+input[id=checkboxs]:checked + label:before{
+    background-color: #ffff;
+    color: #ff0000 !important;
 }
