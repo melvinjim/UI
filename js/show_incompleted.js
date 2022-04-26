@@ -1,4 +1,7 @@
 showIncomplete = function(element){
+    taskIncompleted = 0;
+    document.getElementById("task-incompleted").innerText = taskIncompleted + " " +  "Incompleted Tasks";
+
     textIncompleted = element.parentNode.firstElementChild;
     textIncompleted.classList.remove("located-incompleted")
 
@@ -28,9 +31,10 @@ showIncomplete = function(element){
     }
 
     var counter = document.getElementById("tbody-content");
-    var counterss = counter.getElementsByClassName("datos");
-    for (x=0;x<counterss.length;x++){
-        document.getElementById("task-incompleted").innerText = counterss.length + " " +  "Incompleted Tasks";
+    var countersIncomplete = counter.getElementsByClassName("datos");
+    for (x=0;x<countersIncomplete.length;x++){
+        taskIncompleted = countersIncomplete.length 
+        document.getElementById("task-incompleted").innerText = taskIncompleted + " " +  "Incompleted Tasks";
     }
 
     completeTask = function(element){
@@ -38,8 +42,8 @@ showIncomplete = function(element){
         checktask.classList.remove('datos');
         checktask.classList.add('hidden-task');
 
-        counterss.length--
-        document.getElementById("task-incompleted").innerText = counterss.length + " " +  "Incompleted Tasks";
+        taskIncompleted--
+        document.getElementById("task-incompleted").innerText = taskIncompleted + " " +  "Incompleted Tasks";
 
         var date = new Date();
 
@@ -60,8 +64,11 @@ showIncomplete = function(element){
             deleteLineBtn = element.parentElement.parentNode.parentNode;
             deleteLineBtn.parentNode.removeChild(deleteLineBtn);
             
-            counterss.length--
-            document.getElementById("task-incompleted").innerText = counterss.length + " " +  "Incompleted Tasks";
+            taskIncompleted--
+            document.getElementById("task-incompleted").innerText = taskIncompleted + " " +  "Incompleted Tasks";
         }
     }
+
+    var hideButton = element.parentNode.parentNode.parentNode.nextElementSibling.firstElementChild.firstElementChild.firstElementChild;
+    hideButton.classList.remove("hide-button")
 }
