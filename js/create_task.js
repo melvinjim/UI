@@ -61,9 +61,6 @@ var createTask = function(){
     document.getElementById("description").value = "";
     document.getElementById("limit-date").value = "";
 
-    // dinamicDate++
-    // document.getElementById("task-incompleted").innerText = dinamicDate + " " +  "Incompleted Tasks";
-
     var counter = document.getElementById("tbody-content");
     var countersIncomplete = counter.getElementsByClassName("datos");
     for (x=0;x<countersIncomplete.length;x++){
