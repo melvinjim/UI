@@ -1,4 +1,7 @@
-showTask = function(element){
+showTask = function(element){    
+    taskCompleted = 0;
+    document.getElementById("task-incompleted").innerText = taskCompleted + " " +  "Completed Tasks";
+
     textCompletedTask = element.parentNode.firstElementChild;
     textCompletedTask.classList.remove("tasks-c")
     textCompletedTask.classList.add("located-completed")
@@ -32,12 +35,9 @@ showTask = function(element){
     var counter = document.getElementById("tbody-content");
     var counterss = counter.getElementsByClassName("display-tasks");
     for (x=0;x<counterss.length;x++){
-        document.getElementById("task-incompleted").innerText = counterss.length + " " +  "Completed Tasks";
+        taskCompleted = counterss.length
+        document.getElementById("task-incompleted").innerText = taskCompleted + " " +  "Completed Tasks";
     }
-    
-    // dinamicDates = 0;
-    // dinamicDates = rows.children.length;
-    // document.getElementById("task-incompleted").innerText = dinamicDates + " " +  "Completed Tasks";
 
     completeTask = function(element){
         checktask = element.parentNode.parentNode;
@@ -49,8 +49,8 @@ showTask = function(element){
         
         element.classList.remove("red-checkbox");
 
-        counterss.length--
-        document.getElementById("task-incompleted").innerText = counterss.length + " " +  "Completed Tasks";
+        taskCompleted--
+        document.getElementById("task-incompleted").innerText = taskCompleted + " " +  "Completed Tasks";
     }
 
     deleteBtn = function(element){
@@ -58,10 +58,12 @@ showTask = function(element){
             deleteLineBtn = element.parentElement.parentNode.parentNode;
             deleteLineBtn.parentNode.removeChild(deleteLineBtn);
             
-            counterss.length--
-            document.getElementById("task-incompleted").innerText = counterss.length + " " +  "Completed Tasks";
+            taskCompleted--
+            document.getElementById("task-incompleted").innerText = taskCompleted + " " +  "Completed Tasks";
         }
     }
 
-    
+    var hideButton = element.parentNode.parentNode.parentNode.nextElementSibling.firstElementChild.firstElementChild.firstElementChild;
+    hideButton.classList.add("hide-button");
+
 }
