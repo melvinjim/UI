@@ -6,14 +6,8 @@ showTask = function(element){
     textIncompleted = element.parentNode.parentNode.firstElementChild.firstElementChild;
     textIncompleted.classList.add("located-incompleted")
 
-    var counter = document.getElementById("table-dinamic");
-    var fila = counter.getElementsByTagName('tbody')[0];
-
-    dinamicDate = 0;
-    dinamicDate = fila.children.length;
-    document.getElementById("task-incompleted").innerText = dinamicDate + " " +  "Completed Tasks";
-
     var arrayShowTAsk = element.parentNode.parentNode.parentNode.nextElementSibling.firstElementChild.lastElementChild.lastElementChild;
+
     var travelArray = arrayShowTAsk.getElementsByClassName("hidden-task");
     for (x=0;x<travelArray.length;x++){
         travelArray[x].classList.add("display-tasks");
@@ -35,6 +29,16 @@ showTask = function(element){
         trash[x].classList.add("trash");
     }
 
+    var counter = document.getElementById("tbody-content");
+    var counterss = counter.getElementsByClassName("display-tasks");
+    for (x=0;x<counterss.length;x++){
+        document.getElementById("task-incompleted").innerText = counterss.length + " " +  "Completed Tasks";
+    }
+    
+    // dinamicDates = 0;
+    // dinamicDates = rows.children.length;
+    // document.getElementById("task-incompleted").innerText = dinamicDates + " " +  "Completed Tasks";
+
     completeTask = function(element){
         checktask = element.parentNode.parentNode;
         checktask.classList.remove('display-tasks');
@@ -42,8 +46,22 @@ showTask = function(element){
 
         var completeDate  = element.parentNode.nextElementSibling.nextElementSibling;
         completeDate.innerHTML = " ";
+        
+        element.classList.remove("red-checkbox");
 
-        dinamicDate--
-        document.getElementById("task-incompleted").innerText = dinamicDate + " " +  "Completed Tasks";
+        counterss.length--
+        document.getElementById("task-incompleted").innerText = counterss.length + " " +  "Completed Tasks";
     }
+
+    deleteBtn = function(element){
+        document.getElementById('deleteLineRow').onclick = () => {
+            deleteLineBtn = element.parentElement.parentNode.parentNode;
+            deleteLineBtn.parentNode.removeChild(deleteLineBtn);
+            
+            counterss.length--
+            document.getElementById("task-incompleted").innerText = counterss.length + " " +  "Completed Tasks";
+        }
+    }
+
+    
 }

@@ -63,6 +63,7 @@ var createTask = function(){
 
     dinamicDate++
     document.getElementById("task-incompleted").innerText = dinamicDate + " " +  "Incompleted Tasks";
+    
 }
 
 count = 0; 
