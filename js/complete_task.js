@@ -13,6 +13,8 @@ completeTask = function(element){
     var completeDate  = element.parentNode.nextElementSibling.nextElementSibling;
     completeDate.innerHTML = formatDate(date);
 
+    beforeStyle = element.classList.add("red-checkbox");
+
     dinamicDate--
     document.getElementById("task-incompleted").innerText = dinamicDate + " " +  "Incompleted Tasks";
 }

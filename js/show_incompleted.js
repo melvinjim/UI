@@ -6,12 +6,6 @@ showIncomplete = function(element){
     textCompletedTask.classList.add("tasks-c")
     textCompletedTask.classList.remove("located-completed")
 
-    var counter = document.getElementById("table-dinamic");
-    var fila = counter.getElementsByTagName('tbody')[0];
-    dinamicDate = 0;
-    dinamicDate = fila.children.length;
-    document.getElementById("task-incompleted").innerText = dinamicDate + " " +  "Incompleted Tasks";
-
     var arrayShowTAsk = element.parentNode.parentNode.parentNode.nextElementSibling.firstElementChild.lastElementChild.lastElementChild;
     var travelArray = arrayShowTAsk.getElementsByClassName("hidden-task");
     for (x=0;x<travelArray.length;x++){
@@ -33,10 +27,19 @@ showIncomplete = function(element){
         trash[x].classList.remove("trash");
     }
 
+    var counter = document.getElementById("tbody-content");
+    var counterss = counter.getElementsByClassName("datos");
+    for (x=0;x<counterss.length;x++){
+        document.getElementById("task-incompleted").innerText = counterss.length + " " +  "Incompleted Tasks";
+    }
+
     completeTask = function(element){
         checktask = element.parentNode.parentNode;
         checktask.classList.remove('datos');
         checktask.classList.add('hidden-task');
+
+        counterss.length--
+        document.getElementById("task-incompleted").innerText = counterss.length + " " +  "Incompleted Tasks";
 
         var date = new Date();
 
@@ -49,7 +52,16 @@ showIncomplete = function(element){
         var completeDate  = element.parentNode.nextElementSibling.nextElementSibling;
         completeDate.innerHTML = formatDate(date);
 
-        dinamicDate--
-        document.getElementById("task-incompleted").innerText = dinamicDate + " " +  "Incompleted Tasks";
+        element.classList.add("red-checkbox");
+    }
+
+    deleteBtn = function(element){
+        document.getElementById('deleteLineRow').onclick = () => {
+            deleteLineBtn = element.parentElement.parentNode.parentNode;
+            deleteLineBtn.parentNode.removeChild(deleteLineBtn);
+            
+            counterss.length--
+            document.getElementById("task-incompleted").innerText = counterss.length + " " +  "Incompleted Tasks";
+        }
     }
 }

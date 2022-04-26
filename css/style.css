@@ -185,7 +185,13 @@ input[type=checkbox] + label:active:before{
 
 input[type=checkbox]:checked + label:before{
     background-color: #ffff;
-    color: #959395 !important;
+    color: #959395;
+}
+
+.red-checkbox::before{
+    content: "\2715" !important;
+    color: #ff0000 !important;
+    border: 0.1em solid #ff0000 !important;
 }
 
 .checkbox-container{
