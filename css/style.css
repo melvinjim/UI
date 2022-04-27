@@ -163,7 +163,7 @@ input[type=checkbox]{
 }
 
 input[type=checkbox] + label:before{
-    content: "\2713";
+    content: "";
     border: 0.1em solid #959395;
     border-radius: 50%;
     font-size: 10px;
