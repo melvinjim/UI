@@ -1,4 +1,4 @@
-var addTask = function(){
+document.getElementById('botton-add-task').addEventListener('click', function() {
     table = document.getElementById("table");
     style = getComputedStyle(table);
     task = document.getElementById("task");
@@ -30,9 +30,9 @@ var addTask = function(){
             document.getElementById('edit-task').style.display = 'none';
         }
     };
-};
+});
 
-var cancel = function(){
+document.getElementById('cancel').addEventListener('click', function() {
     if(styleTask.display == 'block'){
         task.style = 'display: none';
 
@@ -40,9 +40,9 @@ var cancel = function(){
             table.style = 'display: block'
         }
     }
-}
+});
 
-var createTask = function(){
+document.getElementById('button-create').addEventListener('click', function() {
     function setTaskValues(title, limitDate, description){
         this.title = title;
         this.limitDate = limitDate;
@@ -63,11 +63,39 @@ var createTask = function(){
 
     var counter = document.getElementById("tbody-content");
     var countersIncomplete = counter.getElementsByClassName("datos");
+
     for (x=0;x<countersIncomplete.length;x++){
         taskIncompleted = countersIncomplete.length
         document.getElementById("task-incompleted").innerText = taskIncompleted + " " +  "Incompleted Tasks";
     }
-}
+});
+
+// var createTask = function(){
+//     function setTaskValues(title, limitDate, description){
+//         this.title = title;
+//         this.limitDate = limitDate;
+//         this.description = description;
+//     }
+
+//     var titleCapture = document.getElementById("title").value;
+//     var limitDateCapture = document.getElementById("limit-date").value;
+//     var descriptionCapture = document.getElementById("description").value;
+    
+//     newData = new setTaskValues(titleCapture, limitDateCapture, descriptionCapture);
+
+//     createRow();
+
+//     document.getElementById("title").value = "";
+//     document.getElementById("description").value = "";
+//     document.getElementById("limit-date").value = "";
+
+//     var counter = document.getElementById("tbody-content");
+//     var countersIncomplete = counter.getElementsByClassName("datos");
+//     for (x=0;x<countersIncomplete.length;x++){
+//         taskIncompleted = countersIncomplete.length
+//         document.getElementById("task-incompleted").innerText = taskIncompleted + " " +  "Incompleted Tasks";
+//     }
+// }
 
 count = 0; 
 

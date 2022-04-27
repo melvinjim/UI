@@ -25,17 +25,17 @@
         </div>
         <div class="tasks">
             <div class="link-incompleted">
-                <a href="#" class="tasks" onclick="showIncomplete(this)">Incomplete Tasks</a>
+                <a href="#" id="Incomplete-task" class="tasks">Incomplete Tasks</a>
             </div>
             <div class="link-completed">
-                <a href="#" class="tasks-c" onclick="showTask(this)">Completed Tasks</a>
+                <a href="#" id="complete-task" class="tasks-c">Completed Tasks</a>
             </div>
         </div>
     </header>
     <section id="table">
         <div class="container boards">
             <div class="botton-add-task container-fluid">
-                <a href="#" class="add-task btn btn-primary" id="botton-add-task" onclick="addTask()">Add Task</a>
+                <a href="#" class="add-task btn btn-primary" id="botton-add-task">Add Task</a>
             </div>
             <table class="table" id="table-dinamic">
                 <thead>
@@ -74,13 +74,13 @@
             </div>
             <div class="cancel-create">
                 <div>
-                    <a href="#" class="cancel btn" onclick="cancel()">Cancel</a>
+                    <a href="#" class="cancel btn" id="cancel">Cancel</a>
                 </div>
                 <div id="create-task">
-                    <a href="#" class="create btn" onclick="createTask()" id="button-create">Create Task</a>
+                    <a href="#" class="create btn" id="button-create">Create Task</a>
                 </div>
                 <div id="edit-task">
-                    <a href="#" class="edit btn" onclick="updateTask()" id="button-edit">Edit Task</a>
+                    <a href="#" class="edit btn" id="button-edit">Edit Task</a>
                 </div>
             </div>
         </div>
