@@ -36,7 +36,7 @@ editTask = function(element){
     }
 }
 
-updateTask = function(){
+document.getElementById('button-edit').addEventListener('click', function() {
     function setTaskValues(title, limitDate, description){
         this.title = title;
         this.limitDate = limitDate;
@@ -68,4 +68,4 @@ updateTask = function(){
             table.style = 'display: block';
         }
     };
-};
+});

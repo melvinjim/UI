@@ -1,15 +1,15 @@
-showIncomplete = function(element){
+document.getElementById('Incomplete-task').addEventListener('click', function() {
     taskIncompleted = 0;
     document.getElementById("task-incompleted").innerText = taskIncompleted + " " +  "Incompleted Tasks";
 
-    textIncompleted = element.parentNode.firstElementChild;
-    textIncompleted.classList.remove("located-incompleted")
+    textIncompleted = document.getElementById("Incomplete-task");
+    textIncompleted.classList.remove("located-incompleted");
 
-    textCompletedTask = element.parentNode.parentNode.lastElementChild.firstElementChild;
-    textCompletedTask.classList.add("tasks-c")
-    textCompletedTask.classList.remove("located-completed")
+    textCompletedTask = document.getElementById("complete-task");
+    textCompletedTask.classList.add("tasks-c");
+    textCompletedTask.classList.remove("located-completed");
 
-    var arrayShowTAsk = element.parentNode.parentNode.parentNode.nextElementSibling.firstElementChild.lastElementChild.lastElementChild;
+    var arrayShowTAsk = document.getElementById("tbody-content");
     var travelArray = arrayShowTAsk.getElementsByClassName("hidden-task");
     for (x=0;x<travelArray.length;x++){
         travelArray[x].classList.remove("display-tasks");
@@ -33,7 +33,7 @@ showIncomplete = function(element){
     var counter = document.getElementById("tbody-content");
     var countersIncomplete = counter.getElementsByClassName("datos");
     for (x=0;x<countersIncomplete.length;x++){
-        taskIncompleted = countersIncomplete.length 
+        taskIncompleted = countersIncomplete.length
         document.getElementById("task-incompleted").innerText = taskIncompleted + " " +  "Incompleted Tasks";
     }
 
@@ -69,6 +69,6 @@ showIncomplete = function(element){
         }
     }
 
-    var hideButton = element.parentNode.parentNode.parentNode.nextElementSibling.firstElementChild.firstElementChild.firstElementChild;
-    hideButton.classList.remove("hide-button")
-}
+    var hideButton = document.getElementById("botton-add-task");
+    hideButton.classList.remove("hide-button");
+});

@@ -1,15 +1,15 @@
-showTask = function(element){    
+document.getElementById('complete-task').addEventListener('click', function() { 
     taskCompleted = 0;
     document.getElementById("task-incompleted").innerText = taskCompleted + " " +  "Completed Tasks";
 
-    textCompletedTask = element.parentNode.firstElementChild;
-    textCompletedTask.classList.remove("tasks-c")
-    textCompletedTask.classList.add("located-completed")
+    textCompletedTask = document.getElementById("complete-task");
+    textCompletedTask.classList.remove("tasks-c");
+    textCompletedTask.classList.add("located-completed");
 
-    textIncompleted = element.parentNode.parentNode.firstElementChild.firstElementChild;
-    textIncompleted.classList.add("located-incompleted")
+    textIncompleted = document.getElementById("Incomplete-task");;
+    textIncompleted.classList.add("located-incompleted");
 
-    var arrayShowTAsk = element.parentNode.parentNode.parentNode.nextElementSibling.firstElementChild.lastElementChild.lastElementChild;
+    var arrayShowTAsk = document.getElementById("tbody-content");
 
     var travelArray = arrayShowTAsk.getElementsByClassName("hidden-task");
     for (x=0;x<travelArray.length;x++){
@@ -63,7 +63,7 @@ showTask = function(element){
         }
     }
 
-    var hideButton = element.parentNode.parentNode.parentNode.nextElementSibling.firstElementChild.firstElementChild.firstElementChild;
+    var hideButton = document.getElementById("botton-add-task");
     hideButton.classList.add("hide-button");
 
-}
+});
